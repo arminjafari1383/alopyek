@@ -1,14 +1,12 @@
 from django.shortcuts import render
-from flights.models import Flight
+from motor.models import Motor
 
 
 def index(request):
     if request.method == 'POST':
-        origin = request.POST['origin']
-        dest = request.POST['dest']
-        date = request.POST['date']
-        seat = request.POST['seat']
-        flights = Flight.objects.filter(origin__city=origin, destination__city=dest)
+        latitude = request.POST['latitude']
+        longitude = request.POST['longitude']
+        motor = Motor.objects.filter(origin__city=origin, destination__city=dest)
         f_list ={
             'flights' : flights
         }
