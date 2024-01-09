@@ -5,16 +5,16 @@ create three class with rest and serilazed
 
 """
 
-class MoterstationSerializer(ModelSerializer):
+class MotorstationSerializer(ModelSerializer):
     class Meta:
-        model = Moterstation
+        model = MotorStation
         fields = ('city',)
 
 
 
 class MotorSerializer(ModelSerializer):
-    latitude = MoterstationSerializer()
-    longitude = MoterstationSerializer()
+    latitude = MotorstationSerializer()
+    longitude = MotorstationSerializer()
     class Meta:
         model = Motor
         fields = '__all__'
@@ -24,7 +24,7 @@ class TravelSerializer(ModelSerializer):
     reservation_code = CharField(required=False)
     user = CharField(required=False)
     class Meta:
-        model = Ticket
+        model = Travel
         fields = '__all__'
 
 
