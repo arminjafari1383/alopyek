@@ -12,3 +12,13 @@ def index(request):
         }
         return render(request, 'motor/list.html', context=m_list)
     return render(request, 'homepage/index.html')
+def html(request):
+    if request.method == 'POST':
+        latitude = request.POST['latitude']
+        longitude = request.POST['longitude']
+        # motor = Motor.objects.filter(origin__city=origin, destination__city=dest)
+        m_list ={
+            'motor' : motor
+        }
+        return render(request, 'motor/list.html', context=m_list)
+    return render(request, 'homepage/login1.html')

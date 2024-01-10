@@ -8,7 +8,7 @@ create three class with rest and serilazed
 class MotorstationSerializer(ModelSerializer):
     class Meta:
         model = MotorStation
-        fields = ('city',)
+        fields = '__all__'
 
 
 

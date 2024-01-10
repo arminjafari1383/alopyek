@@ -1,5 +1,5 @@
 from django.db import models
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 """
 class MotorStation for place all of motor park this station
 class Motor for motor and use for new user for motor
@@ -30,7 +30,7 @@ class Motor(models.Model):
         return "{} - {}".format(self.name,self.no)
 
 class Travel(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
     Motor = models.ForeignKey(MotorStation, on_delete=models.PROTECT)
     name = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
