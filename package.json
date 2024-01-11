@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@neshan-maps-platform/mapbox-gl": "^1.1.1",
+    "@neshan-maps-platform/mapbox-gl-react": "^1.0.0"
+  }
+}
