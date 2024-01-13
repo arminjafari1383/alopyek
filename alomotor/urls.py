@@ -16,9 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('homepage.urls')),
-    path('motor/', include('motor.urls')),
-    path('auth/',include('user.urls')),
+    path('calculate/',include('calculatetheexpense.urls')),
 ]

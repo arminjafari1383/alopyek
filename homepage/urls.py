@@ -4,5 +4,6 @@ from .views import index,html
 
 urlpatterns = [
     path('', index , name='index'),
-    path('html', html,name='html')
+    path('html', html,name='html'),
+    
 ]

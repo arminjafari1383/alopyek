@@ -1,4 +1,4 @@
-from .models import OTP
+from .models import OTP,COST
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import json
@@ -48,3 +48,19 @@ class LoginView(APIView):
                 return Response("Otp is Wrong!", status=403)
         except:
             return Response("Something is Wrong!", status=500)
+
+
+class Travelregistration(APIView):
+       def post(self, request):
+        body = request.body
+        body = json.loads(body)
+        latitude = body['latitude']
+        cost = random.randint(10000,99999)
+        COST.objects.create(
+            latitude = latitude,
+            cost = cost
+        )
+        return Response(cost)
+
+        
+

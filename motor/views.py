@@ -43,3 +43,15 @@ class TravelList(generics.ListAPIView):
     def list(self, request, *args, **kwargs):
         self.queryset = Travel.objects.filter(user=request.user)
         return super().list(request, *args, **kwargs)
+
+# creat html for motor
+# def html(request):
+#     if request.method == 'POST':
+#         latitude = request.POST['latitude']
+#         longitude = request.POST['longitude']
+#         # motor = Motor.objects.filter(origin__city=origin, destination__city=dest)
+#         m_list ={
+#             'motor' : motor
+#         }
+#         return render(request, 'motor/list.html', context=m_list)
+#     return render(request, 'motor/list.html')
