@@ -7,5 +7,3 @@ class Payment(models.Model):
     cvv2_number = models.CharField(max_length=4)
     time = models.DateTimeField()
     code = models.CharField(max_length=4)
-    def __str__(self) -> str:
-        return self.name
