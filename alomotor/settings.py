@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'calculatetheexpense',
     'homepage',
     'motor',
-    'user'
+    'user',
+    'Paymentgateway'
 
 ]
 
