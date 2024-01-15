@@ -1,7 +1,9 @@
 from django.urls import path
 from .views import (
-    CreateMotorStation,
-    MotorStationView,
+    MotorStationView,MotorStationView2,
+    MotorView,MotorView2,TravelView,
+    TravelView2
+
 )
 urlpatterns =[
     path('createmotorstation', MotorStationView.as_view(), name='createmotorstation'),
