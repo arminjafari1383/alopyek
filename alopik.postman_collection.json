@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "63204b4b-2e45-4043-b643-7def9a7033da",
+		"name": "alopik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31247561",
+		"_collection_link": "https://orange-spaceship-919135.postman.co/workspace/a~9f559e00-eef6-49f5-8123-320710c1d199/collection/31247561-63204b4b-2e45-4043-b643-7def9a7033da?action=share&source=collection_link&creator=31247561"
+	},
+	"item": [
+		{
+			"name": "cost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\":55555\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/getlocation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"getlocation"
+					]
+				},
+				"description": "this api for get distance convert to cost"
+			},
+			"response": []
+		},
+		{
+			"name": "create otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/generate-otp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"generate-otp"
+					]
+				},
+				"description": "this api for create otp, you can type phone number in header"
+			},
+			"response": []
+		},
+		{
+			"name": "check otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Paymentgateway/createmotorstation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Paymentgateway",
+						"createmotorstation"
+					]
+				},
+				"description": "this api you use two parameters of get and post for see alist of payment"
+			},
+			"response": []
+		},
+		{
+			"name": "edit payment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Paymentgateway/PaymentRetrieve2/<int:pk>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Paymentgateway",
+						"PaymentRetrieve2",
+						"<int:pk>"
+					]
+				},
+				"description": "this api for edit detail of payment and you can use for three parameters put delete patch"
+			},
+			"response": []
+		},
+		{
+			"name": "create motorstation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/createmotorstation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"createmotorstation"
+					]
+				},
+				"description": "you can use this api for create motor station and use two method get,post"
+			},
+			"response": []
+		},
+		{
+			"name": "edit motorstation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/createmotorstation/<int:pk>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"createmotorstation",
+						"<int:pk>"
+					]
+				},
+				"description": "this for edit motorstationdetail and use in three method fetch delet put"
+			},
+			"response": []
+		},
+		{
+			"name": "create motor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/createmotor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"createmotor"
+					]
+				},
+				"description": "you can create a motor and use two options get post"
+			},
+			"response": []
+		},
+		{
+			"name": "edit motor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/createmotor/<int:pk>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"createmotor",
+						"<int:pk>"
+					]
+				},
+				"description": "you can edit motor detail and use method put fetch delet"
+			},
+			"response": []
+		},
+		{
+			"name": "create travel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/createtravel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"createtravel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit travel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/createtravel/<int:pk>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"createtravel",
+						"<int:pk>"
+					]
+				},
+				"description": "you use for edit travel"
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/motor/OrderView",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"motor",
+						"OrderView"
+					]
+				},
+				"description": "you can create order with post get"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/calculate/OrderView/<int:pk>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calculate",
+						"OrderView",
+						"<int:pk>"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
