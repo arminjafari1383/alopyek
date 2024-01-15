@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'homepage',
     'motor',
     'user',
-    'Paymentgateway'
+    'Paymentgateway',
+    'Coupon'
 
 ]
 

@@ -22,5 +22,6 @@ urlpatterns = [
     path('',include('homepage.urls')),
     path('motor/',include('motor.urls')),
     path('calculate/',include('calculatetheexpense.urls')),
-    path('Paymentgateway/',include('Paymentgateway.urls'))
+    path('Paymentgateway/',include('Paymentgateway.urls')),
+    path('Coupon/',include('Coupon.urls'))
 ]
