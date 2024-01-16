@@ -1,6 +1,12 @@
-from .models import OTP,COST
+from django.http.response import HttpResponse, JsonResponse
+from .models import OTP,COST,User
+from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from .serializers import UserSerializer
+from rest_framework import generics
+from rest_framework import status
+from user.authentication import JWTAuthentication
 import json
 import random
 from rest_framework import exceptions
@@ -61,6 +67,10 @@ class Travelregistration(APIView):
             cost = cost
         )
         return Response(cost)
+
+class CreateUser(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
         
 

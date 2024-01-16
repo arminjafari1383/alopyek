@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'motor',
     'user',
     'Paymentgateway',
-    'Coupon'
+    'Coupon',
+    'usermotor'
 
 ]
 
