@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import index,html
+from .views import OTPgenrate,mainpage
 
 
 urlpatterns = [
-    path('', index , name='index'),
-    path('html', html,name='html'),
+    path('', mainpage , name='mainpage'),
+    path('OTPgenrate',OTPgenrate.as_view(), name='otpgenrate')
     
 ]

@@ -1,3 +1,9 @@
-from django.contrib import admin
+#import from django register and ModelAdmin
+from django.contrib.admin import register,ModelAdmin
+#import from model function OTP
+from .models import OTP
 
-# Register your models here.
+#this decorator for adminotp
+@register(OTP)
+class OtpAdmin(ModelAdmin):
+    pass

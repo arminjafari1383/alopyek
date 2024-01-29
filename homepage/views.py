@@ -1,24 +1,24 @@
 from django.shortcuts import render
-from motor.models import Motor
+from .models import OTP
+from rest_framework.views import APIView
+from rest_framework.response import Response
+import json
+import random
+from rest_framework import exceptions
 
-
-def index(request):
-    if request.method == 'POST':
-        latitude = request.POST['latitude']
-        longitude = request.POST['longitude']
-        # motor = Motor.objects.filter(origin__city=origin, destination__city=dest)
-        m_list ={
-            'motor' : motor
-        }
-        return render(request, 'motor/list.html', context=m_list)
+#this function for show main page
+def mainpage(request):
     return render(request, 'homepage/index.html')
-def html(request):
-    if request.method == 'POST':
-        latitude = request.POST['latitude']
-        longitude = request.POST['longitude']
-        # motor = Motor.objects.filter(origin__city=origin, destination__city=dest)
-        m_list ={
-            'motor' : motor
-        }
-        return render(request, 'motor/list.html', context=m_list)
-    return render(request, 'homepage/login1.html')
+#this class for genrate otp code
+class OTPgenrate(APIView):
+
+    def post(self, request):
+        body = request.body
+        body = json.loads(body)
+        phone_number = body['phone_number']
+        otp = random.randint(10000,99999)
+        OTP.objects.create(
+            phone_number = phone_number,
+            otp = otp
+        )
+        return Response(otp)

@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+#this class for otp input(get phone number)
+class OTP(models.Model):
+    phone_number = models.CharField(max_length=20)
+    
