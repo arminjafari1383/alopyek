@@ -33,3 +33,11 @@ class TravelView(generics.ListCreateAPIView):
 class TravelView2(generics.RetrieveUpdateDestroyAPIView):
     queryset = Travel.objects.all()
     serializer_class =  TravelSerializer
+
+#this class for save detail travel
+class TravelcostSerializer(generics.ListCreateAPIView):
+    queryset =  Measuretravel.objects.all()
+    serializer_class =   MeasureTravelCostSerializer
+class TravelcostSerializer(generics.RetrieveUpdateDestroyAPIView):
+    queryset =  Measuretravel.objects.all()
+    serializer_class =   MeasureTravelCostSerializer

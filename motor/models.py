@@ -41,3 +41,10 @@ class Travel(models.Model):
     def __str__(self) -> str:
         return '{} {}'.format(self.name, self.lastname)
 
+#this class measuare cost travel travel
+class Measuretravel(models.Model):
+    distance = models.CharField(max_length=10)
+    destination = models.CharField(max_length=20)
+
+    def __str__(self) -> str:
+        return '{} {}'.format(self.name)

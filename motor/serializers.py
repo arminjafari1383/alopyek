@@ -27,4 +27,11 @@ class TravelSerializer(ModelSerializer):
         model = Travel
         fields = '__all__'
 
+#this class for get request from neshan api
+class MeasureTravelCostSerializer(ModelSerializer):
+    cost = CharField(required=False)
+    class Meta:
+        model =  Measuretravel
+        fields = '__all__'
+
 
