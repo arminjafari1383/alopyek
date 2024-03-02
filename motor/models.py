@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 """
 class MotorStation for place all of motor park this station
 class Motor for motor and use for new user for motor
@@ -30,7 +31,7 @@ class Motor(models.Model):
         return "{} - {}".format(self.name,self.no)
     objects = models.manager()
     published =  Managermotors()
-    
+
 
 class Travel(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
@@ -55,3 +56,6 @@ class Measuretravel(models.Model):
 class Managermotors(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(status = Post.Status.PUBLISHED)
+# canonical function
+def get_absolute_url(self):
+    return reverse('alopiek:motor reservation',args=[self.id])
