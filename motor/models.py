@@ -28,6 +28,9 @@ class Motor(models.Model):
     price = models.FloatField(help_text="Price in Rial")
     def __str__(self) -> str:
         return "{} - {}".format(self.name,self.no)
+    objects = models.manager()
+    published =  Managermotors()
+    
 
 class Travel(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
@@ -48,3 +51,7 @@ class Measuretravel(models.Model):
 
     def __str__(self) -> str:
         return '{} {}'.format(self.name)
+# Managers motor
+class Managermotors(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(status = Post.Status.PUBLISHED)
