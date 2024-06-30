@@ -1,0 +1,4 @@
+{"status":"Ok","rows":[{"elements":[{"status":"Ok","duration":{"value":605,"text":"۱۰ دقیقه"},"distance":{"value":8325,"text":"۸ کیلومتر"}},{"status":"Ok","duration":{"value":396,"text":"۷ دقیقه"},"distance":{"value":5161,"text":"۵ کیلومتر"}}]},{"elements":[{"status":"Ok","duration":{"value":513,"text":"۹ دقیقه"},"distance":{"value":5300,"text":"۵ کیلومتر"}},{"status":"Ok","duration":{"value":67,"text":"۱ دقیقه"},"distance":{"value":389,"text":"۴۰۰ متر"}}]}],"origin_addresses":["36.317559,59.532225","36.337077,59.530843"],"destination_addresses":["36.350681,59.545225","36.337012,59.530023"]}
+<Response [200]>
+{"status":"Ok","rows":[{"elements":[{"status":"Ok","duration":{"value":38187,"text":"۱۰ ساعت ۳۶ دقیقه"},"distance":{"value":886262,"text":"۹۰۰ کیلومتر"}}]}],"origin_addresses":["35.841123,50.967888"],"destination_addresses":["39.775273,44.606835"]}
+<Response [200]>

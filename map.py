@@ -7,7 +7,7 @@ data = {
 }
 data = json.dumps(data)
 response = requests.get(
-    url='https://api.neshan.org/v4/direction?type=car&origin=34.77723862645681,48.52053860649812&destination=34.79368700172722,48.503407063998566&avoidTrafficZone=false&avoidOddEvenZone=false&alternative=false&bearing=',
+    url=' https://api.neshan.org/v1/distance-matrix/no-traffic?type=car&origins=35.841099,50.967880&destinations=48.51925179,34.77754899',
     data = data,
     headers={'Api-Key':'service.b3fa53fc30254c16ac0dc094deea13e4'}
 )

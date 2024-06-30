@@ -72,5 +72,7 @@ class CreateUser(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-        
+class Createneworder(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer        
 

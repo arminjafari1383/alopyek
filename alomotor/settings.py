@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'user',
     'Paymentgateway',
     'Coupon',
-    'usermotor'
+    'usermotor',
+    'corsheaders'
 
 ]
 
@@ -56,7 +57,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
+# CORS_ORIGIN_WHITELIST = [
+#      '<http://localhost:3000>',  # The default port for create-react-app
+# 
+
 
 ROOT_URLCONF = 'alomotor.urls'
 
@@ -84,12 +90,8 @@ WSGI_APPLICATION = 'alomotor.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'alopiek_db',
-        'HOST' : 'localhost',
-        'PORT' : '5432',
-        'USER' : 'postgres',
-        'PASSWORD' : 'armin1383'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
